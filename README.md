@@ -29,6 +29,10 @@ This is a Python app to run terminal commands on a file line by line and can sto
  3. Same as 2. OverWrite Output File  if exists
  
         $ python CmdPy.py -f input.txt -c echo -o output.txt -ow
+    
+ 4. Pass String with multiple params as command example ls -l
+ 
+        $ python CmdPy.py -f input.txt -c 'ls -l' -o output.txt -ow
         
         
         

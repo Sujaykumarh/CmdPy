@@ -33,7 +33,9 @@ def runCommand():  # function to run Command
         f.write("")
 
     for line in lines:
-        output = subprocess.run([_command, line], stdout=subprocess.PIPE).stdout.decode('utf-8').strip()
+        command = _command.split()
+        command.append(line)
+        output = subprocess.run(command, stdout=subprocess.PIPE).stdout.decode('utf-8').strip()
         print(output)  # Print Output of command
         if (_output_file != ''):
             f = open(_output_file, "a")
